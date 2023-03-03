@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica numero 2</title>
+    <style>
+        /* Ejemplo keyboard */
+        kbd {
+        border-radius: 2px;
+        padding: 2px;
+        border: 1px solid black;
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+  
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+  
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      samp{
+        background-color: #f34848;
+      }
+      th {
+        background: white;
+        position: sticky;
+        top: 0; /* Don't forget this, required for the stickiness */
+    }
+
+    h1 {
+    font-family: arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 3%;
+    margin-left: 10%;
+}
+  </style>
+</head>
+<html>
+<body>
+      <h1>Crear una página web que muestre 102 Etiquetas HTML</h1>
+      <table>
+        <tr>
+          <th>#</th>
+          <th>Etiqueta</th>
+          <th>Definicion</th>
+          <th>Ejemplo</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>!DOCTYPE</td>
+          <td>tipo de documento</td>
+          <td>indica al navegador la versión de html empleada</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>&lt;!-- ... --&gt;</td>
+          <td>comentario (sólo visible en el código fuente)</td>
+          <td>cuando necesitamos anotar algo</td>
+        </tr>
+        <tr> 
+          <td>3</td>
+          <td>html</td>
+          <td>engloba todo el documento</td>
+          <td>contenedor de nuestra pagina</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>head</td>
+          <td>delimita el encabezado del documento</td>
+          <td>Contenedor del metadata</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>title</td>
+          <td>título del documento.</td>
+          <td>se muestra en la pestaña del navegador</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>base</td>
+          <td>URI base para direcciones relativas</td>
+          <td>Va en el header como link base de referencia.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>link</td>
+          <td>enlace a otros archivos</td>
+          <td>Si queremos agregar un archivo que se encuentra en otra fuente</td>
+        </tr>
+        <tr> 
+          <td>8</td>
+          <td>meta</td>
+          <td>metainformación sobre el documento</td>
+          <td>Cuando mandamos un link y carga imagenes y descripcion</td>
+        </tr>
+        <tr> 
+          <td>9</td>
+          <td>style</td>
+          <td>hoja de estilo incluida en el documento</td>
+          <td>Para dar diseño a nuestra pagina</td>
+        </tr>
+        <tr>
+            <td>10</td>
+          <td>body</td>
+          <td>delimita el cuerpo del documento</td>
+          <td>Toda la estructura que podemos ver en la pagina</td>
+        </tr>
+        <tr> 
+            <td>11</td>
+          <td>article</td>
+          <td>La etiqueta especifica contenido independiente</td>
+          <td>en un foro o blog</td>
+        </tr>
+        <tr> 
+          <td>12</td>
+          <td>section</td>
+          <td>Define una seccion del documento.</td>
+          <td>Separar diseños</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>nav</td>
+            <td>Define links de navegacion</td>
+            <td>En un menu</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>aside</td>
+            <td>Contenido aparte del principal</td>
+            <td>Puede ser una pequeña observacion del contenido original</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>H1</td>
+            <td>Utilizado para crear un titulo en nuestro contenido principal</td>
+            <td>el titulo del contenido de esta pagina</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>H2</td>
+            <td>titulo que le sigue a H1</td>
+            <td>Subtitulo</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>H3</td>
+            <td>titulo que le sigue a H2</td>
+            <td>Subtitulo</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>H4</td>
+            <td>titulo que le sigue a H3</td>
+            <td>Subtitulo</td>
+        </tr>     
+        <tr>
+            <td>19</td>
+            <td>H5</td>
+            <td>titulo que le sigue a H4</td>
+            <td>Subtitulo</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>H6</td>
+            <td>titulo que le sigue a H5 y el final de los headers</td>
+            <td>Subtitulo</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>header</td>
+            <td>Introduccion de un articulo</td>
+            <td>Dentro del tag article</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>footer</td>
+            <td>Pie de pagina</td>
+            <td>El contenido al final de las paginas que indica informacion generalmente de contacto</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>address</td>
+            <td>Direccion</td>
+            <td>Dirreccion de un local</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>p</td>
+            <td>Párrafo</td>
+            <td>Párrafos en un articulo</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>hr</td>
+            <td>Separador de contenido</td>
+            <td>Trazar una linea entre párrafo</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>div</td>
+            <td>Encapsula elementos en su propio ambiente</td>
+            <td>Separar  algun diseño de otro</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>blockquote</td>
+            <td>Cita larga</td>
+            <td>Una cita que incluye varios párrafos</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>pre</td>
+            <td>texto preformateado</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>main</td>
+            <td>Contenido principal</td>
+            <td>En una pagina de noticias este se usaria para resaltar una noticia</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>figure</a></td>
+            <td>Similar al div pero se usa para separar imagenes</td>
+            <td>Galeria de fotos</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>figcaption</td>
+            <td>Dentro de figure como pie de foto</td>
+            <td>Al final de una imagen para describirla</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>br</td>
+            <td>salto de línea</td>
+            <td>En un parrafo para crear un salto linea</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>wbr</td>
+            <td>Posible salto de línea</td>
+            <td>Si el texto es mas largo que la pantalla automaticamente da un salto</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>a</td>
+            <td>hiperenlace</td>
+            <td>un enlace para otro articulo o pagina</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>span</td>
+            <td>Contenedor de texto genérico</td>
+            <td>Agregar diseño a cierta parte del texto</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>strong</td>
+            <td>Resaltar palabras o frases importantes</td>
+            <td>Marcar texto a <strong>tomar en cuenta</strong></td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>em</td>
+            <td>Enfatizar texto</td>
+            <td>Para que el usuario haga enfasis en la lectura</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>sub</td>
+            <td>subíndice</td>
+            <td>Ejemplo la formula H<sub>2</sub>O</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>sup</td>
+            <td>superíndice</td>
+            <td>Ejemplo en 3<sup>2</sup></td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>abbr</td>
+            <td>abreviatura</td>
+            <td><abbr title="Dominican Republic">D.R</abbr></td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>b</td>
+            <td>Pone el texto en negrita sin hacerlo importante</td>
+            <td>La practica 2 es <b>muy larga</b></td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>cite</td>
+            <td>Citar una obra</td>
+            <td><cite>The Scream</cite> cuadro hecho por Edward Munch</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>data</td>
+            <td>Ayuda a la maquina a leer datos </td>
+            <td>Valores en elementos</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>dfn</td>
+            <td>Definición de un elemento</td>
+            <td>Para la definicion de un termino</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>kbd</td>
+            <td>teclado</td>
+            <td><kbd>F5</kbd> para actualizar la pagina</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>i</td>
+            <td>tecnicismo</td>
+            <td>Marcar texto en <i>italic</i></td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td>mark</td>
+            <td>Resaltado añadido posteriormente, no en el original</td>
+            <td>Palabra o frase resaltado en un parrafo</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>q</td>
+            <td>Definir una cita o frase </td>
+            <td><q>La guerra es la información 90%</q></td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>s</td>
+            <td>Linea en medio</td>
+            <td><s>Tickets agotados</s></td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>small</td>
+            <td>Texto mas pequeño de lo normal</td>
+            <td>Puede ser algo <small>no tan importante</small></td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td>time</td>
+            <td>fecha y hora</td>
+            <td>Horario Miercole <time>8:00</time> a <time>9:00</time></td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td>u</td>
+            <td>Una palabra mal escrita marcada por una linea</td>
+            <td><u>egemplo</u></td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td>code</td>
+            <td>código</td>
+            <td>mostrar un poco de codigo</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>samp</td>
+            <td>Ejemplo de salida de codigo</td>
+            <td><samp>File Not Found.</samp></td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>var</td>
+            <td>Variable matematica o programable</td>
+            <td>Tel area del triangulo es: 1/2 * <var>b</var> * <var>h</var></td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>bdo</td>
+            <td>Dirección de escritura</td>
+            <td><bdo dir="rtl">Dirección de escritura</bdo>(De derecha a izquierda)</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td>bdi</td>
+            <td>Ignorar dirección de escritura</td>
+            <td>Un texto arababico por ejemplo no se veria afectado dentro del tag</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td>applet</td>
+            <td>Usado en HTML4</td>
+            <td><samp>No soportado actualmente</samp></td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>map</td>
+            <td>Usado para definir un mapa de imagenes</td>
+            <td>Un motherboard con links en componentes</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>area</td>
+            <td>Usado dentro de map para definir las imagenes</td>
+            <td>Imagen de un escritorio con multiples herramientas</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>ins</td>
+            <td>Texto insertado en el documento, marcado por una linea debajo</td>
+            <td><ins>este texto fue insertado</ins></td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>del</td>
+            <td>Texto borrado en el documento, marcado por una linea en medio</td>
+            <td><del>Este texto fue borrado</del></td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>img</td>
+            <td>Agregar una imagen </td>
+            <td>Mostrar fotos en un blog</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>iframe</td>
+            <td>marco incrustado en el documento</td>
+            <td>Agregar un documento dentro de nuestro documento, en cuadro miniatura</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td>embed</td>
+            <td>Contenedor para un recurso externo</td>
+            <td>imagenes, otros documentos, videos</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>object</td>
+            <td>Define un contenedor para recursos externos, tal como iframe(recomendado)</td>
+            <td>Imagenes, otros documentos, videos</td>
+        </tr>
+        <tr>
+            <td>65</td>
+            <td>param</td>
+            <td>parámetro para &lt;objeto&gt;</td>
+            <td>archivos de audios e imagenes dentro de <kbd>object</kbd></td>
+        </tr>
+        <tr>
+            <td>66</td>
+            <td>video</td>
+            <td>Usado para agregar un video a nuestro documento</td>
+            <td>Agregar videos a nuestra pagina</td>
+        </tr>
+        <tr>
+            <td>67</td>
+            <td>source</td>
+            <td>Usado para agregar un fuente de donde viene el video</td>
+            <td>Agregar videos con ayuda de &lt;video&gt;</td>
+        </tr>
+        <tr>
+            <td>68</td>
+            <td>audio</td>
+            <td>Tag usado para agregar sonidos</td>
+            <td>Grabaciones en un podcast</td>
+        </tr>
+        <tr> 
+            <td>69</td>
+            <td>track</td>
+            <td>Especifica texto para los videos o audios de nuestra multimedia</td>
+            <td>El texto del podcast se ira marcando a medida que avanza</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>ol</td>
+            <td>Lista ordenada</td>
+            <td>De 1 a N</td>
+        </tr>
+        <tr>
+            <td>71</td>
+            <td>ul</td>
+            <td>lista no ordenada</td>
+            <td>Inventarios</td>
+        </tr>
+        <tr>
+            <td>72</td>
+            <td>menu</td>
+            <td>equivale a ul</td>
+            <td>Menu en un restaurant</td>
+        </tr>
+        <tr>
+            <td>73</td>
+            <td>li</td>
+            <td>elemento de lista (ordenada o no ordenada)</td>
+            <td>Precios</td>
+        </tr>
+        <tr>
+            <td>74</td>
+            <td>dl</td>
+            <td>lista de definición</td>
+            <td>Un menu con platos y que incluye</td>
+        </tr>
+        <tr>
+            <td>75</td>
+            <td>dt</td>
+            <td>término en lista de definición</td>
+            <td>Ejemplo un platillo</td>
+        </tr>
+        <tr>
+            <td>76</td>
+            <td>dd</td>
+            <td>definición en lista de definición</td>
+            <td>Incredientes de un platillo</td>
+        </tr>
+        <tr>
+            <td>77</td>
+            <td>table</td>
+            <td>Define una tabla</td>
+            <td>Esta tabla que ves</td>
+        </tr>
+          <tr>
+            <td>78</td>
+            <td>caption</td>
+            <td>leyenda de tabla</td>
+            <td>Texto que describe la tabla</td>
+          </tr>
+          <tr>
+            <td>79</td>
+            <td>colgroup</td>
+            <td>Grupo de columnas</td>
+            <td>Columna de gastos</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td>tbody</td>
+            <td>cuerpo de tabla</td>
+            <td>grupo de filas</td>
+          </tr>
+          <tr>
+            <td>81</td>
+            <td>thead</td>
+            <td>cabecera de tabla</td>
+            <td>titulos de la taba</td>
+          </tr>
+          <tr>
+            <td>82</td>
+            <td>tfoot</td>
+            <td>Pie de tabla</td>
+            <td>Parte final</td>
+          </tr>
+          <tr>
+            <td>83</td>
+            <td>tr</td>
+            <td>fila en tabla</td>
+            <td>Filas en tabla de empleados</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td>td</td>
+            <td>Celda</td>
+            <td>Elementos que hay en la fila de una tabla</td>
+          </tr>
+          <tr>
+            <td>85</td>
+            <td>th</td>
+            <td>Celda de cabecera</td>
+            <td>titulos de las columnas</td>
+          </tr>
+          <tr>
+            <td>86</td>
+            <td>col</td>
+            <td>Define propiedades a las columnas dentro de &lt;colgroup&gt;</td>
+            <td>Editas colores de las columnas</td>
+          </tr>
+          <tr>
+                <td>87</td>
+                <td>form</td>
+                <td>Define un formulario</td>
+                <td>Ingresar información usuario o registrarse en una pagina</td>
+          </tr>
+          <tr>
+            <td>88</td>
+            <td>label</td>
+            <td>Etiqueta de un control</td>
+            <td>Etiqueta para un input</td>
+          </tr>
+          <tr>
+            <td>89</td>
+            <td>input</td>
+            <td>control (hay varios tipos)</td>
+            <td>Agregar rango,colores, texto, etc</td>
+          </tr>
+          <tr>
+            <td>90</td>
+            <td>button</td>
+            <td>botón</td>
+            <td>Boton para mandar un request</td>
+          </tr>
+      <tr>
+        <td>91</td>
+        <td>select</td>
+        <td>caja de lista</td>
+        <td>Crear una caja de lista</td>
+      </tr>
+      <tr>
+        <td>92</td>
+        <td>datalist</td>
+        <td>Pre-define opciones para un &lt;input&gt;</td>
+        <td>Listado de vehiculos</td>
+      </tr>
+      <tr>
+        <td>93</td>
+        <td>optgroup</td>
+        <td>grupo de opciones en una caja de lista</td>
+        <td>categorias dentro de un &lt;select&gt;</td>
+      </tr>
+      <tr>
+        <td>94</td>
+        <td>option</td>
+        <td>opción de caja de lista</td>
+        <td>En una lista de bebidas</td>
+      </tr>
+      <tr>
+        <td>95</td>
+        <td>textarea</td>
+        <td>área de texto</td>
+        <td>Una caja de comentarios</td>
+      </tr>
+      <tr>
+        <td>96</td>
+        <td>output</td>
+        <td>Representa un calculo</td>
+        <td>Numero de items que desea comprar</td>
+      </tr>
+      <tr>
+        <td>97</td>
+        <td>progress</td>
+        <td>Representa una barra de completado</td>
+        <td><progress value="50" max="100"></progress> 50%</td>
+      </tr>
+      <tr>
+        <td>98</td>
+        <td>meter</td>
+        <td>Indicador similar a &lt;progress&gt; pero para medidas</td>
+        <td>Espacio de disco disponible: <meter id="disk_d" value="0.6"></meter> 40%</td>
+      </tr>
+      <tr>
+        <td>99</td>
+        <td>fieldset</td>
+        <td>grupo de controles</td>
+        <td>Un grupo de datos relacionados en un &lt;form&gt;</td>
+      </tr>
+      <tr>
+        <td>100</td>
+        <td>legend</td>
+        <td>leyenda de grupo de controles</td>
+        <td>Un titulo en un elemento &lt;fieldset&gt;</td>
+      </tr>
+      <tr>
+        <td>101</td>
+        <td>details</td>
+        <td>Agrega informacion adicional</td>
+        <td>Un lugar geografico con sus caracteristicas</td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Sumary</td>
+        <td>leyenda para &lt;details&gt;</td>
+        <td>Un titulo en el recuadro</td>
+      </tr>       
+      </table>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
+
+#main {                
+    margin: 15% 15% 35% 40%; /* top right bottom left*/
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: "Sansita Swashed", cursive;
+    background-color: rgba(255, 255, 255,0.1);
+    z-index: 10;
+    position: absolute;
+
+}
+#particles-js {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -999;
+}
+
+    /* Efecto de vidrio */
+#glass{
+    padding: 35px;
+    background: rgba(233, 232, 232, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+                
+        
+@media only screen and (max-width: 480px) {
+    #main {
+        margin: 50% 50% 55% 20%;  /* top right bottom left*/
+    }
+}
+                
+                
+</style>
+    <script src="./JS/index.js" defer></script>
+</head>
+<body style="background-color: black;">  
+
+        <main id="main">
+            <div id="glass">
+                    <h1>Validador de cedula</h1>
+                    <span id="check"></span> <br>
+                    <input type="text" id="cedula" placeholder="Cedula sin guines">
+                    <br>
+                    <p>Estado de cedula: <span id="final"></span> </p>
+            </div>
+        </main>
+
+        <div id="particles-js"></div>
+    
+
+    <script src="./JS/particles.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>
