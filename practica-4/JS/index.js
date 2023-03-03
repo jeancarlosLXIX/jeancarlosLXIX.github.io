@@ -27,7 +27,7 @@ function cedulaEntrada() {
     }
 
     if (valor.length === 11 ) { // Numero mayor igual a 10
-        span.innerText = "✅ 11/11"
+        span.innerText = " 11/11"
         if (cedula0(valor)){
           span.innerText = " Cedula invalida."
           inputCedula.value = ""
