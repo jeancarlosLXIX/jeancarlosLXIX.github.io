@@ -9,13 +9,11 @@ const glass = document.getElementById("glass")
 
 let buenaEntrada = false // cuando tengamos los digitos de la cedula llenaremos lo demas
 
-// Detectamos cambios en el campo cedula
-inputCedula.addEventListener("keyup",cedulaEntrada)
+inputCedula.addEventListener("keyup",cedulaEntrada) // Detectamos cambios en el campo cedula
 
 function cedulaEntrada() {
     let valor = inputCedula.value
-    // Verificar si el valor es un numero y no esta vacio
-    let primeraCondicion = !isNaN(valor) && (valor != "")
+    let primeraCondicion = !isNaN(valor) && (valor != "") // Verificar si el valor es un numero y no esta vacio
 
     if (!primeraCondicion) {
         span.innerText = " Solo se aceptan numeros."
@@ -34,7 +32,7 @@ function cedulaEntrada() {
           pEstado.innerText = " Cedula no existe."
           return
         }
-        
+
         buenaEntrada = true
         
     } else {
@@ -59,11 +57,6 @@ function cedulaEntrada() {
 function verificadorLuhn(cedula) { 
 
     let revertido = cedula.split('').reverse().join('')
-    /**
-     * Split lo divide en un arreglo
-     * reverse lo invierte 
-     * join es para unirlos en un string
-     */
     let sumarImpar = 0
     for (let i = 0; i < revertido.length; i+=2) { // aumentamos de 2 en 2 para que sea impar
       let x = parseInt(revertido[i])
@@ -79,17 +72,11 @@ function verificadorLuhn(cedula) {
       sumarPar += x
     }
     let total = sumarImpar + sumarPar  
-    if (total % 10 === 0) {
+    if (total % 10 === 0)
       return true
-    } else {
+    
       return false
-    }
 }
 
 const cedula0 = (valores) => valores.slice(0,3) === "000" // Si los 3 primeros digitos son 0 retorna verdadero
-
-function changeColor(color) {
-  let bg = (color == "green") ? "rgba(38,255,1,0.59)" : "rgba(255,25,88,0.59)"
-
-  glass.style.background = bg
-}
+const changeColor = (color) => glass.style.background = (color == "green") ? "rgba(38,255,1,0.59)" : "rgba(255,25,88,0.59)"
