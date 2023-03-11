@@ -54,29 +54,26 @@ function cedulaEntrada() {
     }
 }
 
-function verificadorLuhn(cedula) { 
-
-    let revertido = cedula.split('').reverse().join('')
-    let sumarImpar = 0
-    for (let i = 0; i < revertido.length; i+=2) { // aumentamos de 2 en 2 para que sea impar
-      let x = parseInt(revertido[i])
-      sumarImpar += x
+function verificadorLuhn(cedula) {
+    let total = 0
+    for (let i = 0; i < cedula.length; i++) {
+        let temp = i%2 == 0 ? parseInt(cedula[i]) : parseInt(cedula[i]) * 2 //si es impar multiplicamos
+        total += temp > 9 ?  (temp-9) : temp
     }
-    let sumarPar = 0
-    for (let i = 1; i < revertido.length; i+=2) {
-      let x = parseInt(revertido[i])
-      x = x * 2
-      if (x > 9) { // Mayor a 9 le restamos 9
-        x -= 9
-      }
-      sumarPar += x
-    }
-    let total = sumarImpar + sumarPar  
-    if (total % 10 === 0)
-      return true
-    
-      return false
+    return total%10 === 0 ? true : false
 }
 
 const cedula0 = (valores) => valores.slice(0,3) === "000" // Si los 3 primeros digitos son 0 retorna verdadero
 const changeColor = (color) => glass.style.background = (color == "green") ? "rgba(38,255,1,0.59)" : "rgba(255,25,88,0.59)"
+
+/**
+ * Como un pequeño reto era hacerlo lo mas corto posible opte por usar la version corta del if-else que es ?:
+ * si no lo huera hecho asi el codigo quedaria de la siguiente manera a la hora de validar si el numero es
+ * mayor a 9
+ * if (temp>9){
+ * total += temp - 9
+ * } else {
+ *  total += temp
+ * }
+ * 
+ */
