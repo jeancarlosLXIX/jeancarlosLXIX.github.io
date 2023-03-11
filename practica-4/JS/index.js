@@ -65,15 +65,3 @@ function verificadorLuhn(cedula) {
 
 const cedula0 = (valores) => valores.slice(0,3) === "000" // Si los 3 primeros digitos son 0 retorna verdadero
 const changeColor = (color) => glass.style.background = (color == "green") ? "rgba(38,255,1,0.59)" : "rgba(255,25,88,0.59)"
-
-/**
- * Como un pequeño reto era hacerlo lo mas corto posible opte por usar la version corta del if-else que es ?:
- * si no lo huera hecho asi el codigo quedaria de la siguiente manera a la hora de validar si el numero es
- * mayor a 9
- * if (temp>9){
- * total += temp - 9
- * } else {
- *  total += temp
- * }
- * 
- */
